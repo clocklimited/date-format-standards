@@ -5,7 +5,7 @@ documentation.
 
 Formats can be changed on client request but these should remain the defaults.
 
-Are you free to choose the most appropriate format for your use case.
+You are free to choose the most appropriate format for your use case.
 
 Most importantly, NEVER USE DD/MM/YYYY or MM/DD/YYYY it is real bad format and
 can be confusing internationally.
