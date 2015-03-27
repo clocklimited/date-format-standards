@@ -1,0 +1,18 @@
+{
+  "timezone": "Europe/London",
+  "formats": {
+    "date": {
+      "short": "D MMM YYYY",
+      "long": "dddd D MMMM YYYY",
+      "isoDate": "YYYY-MM-DD",
+      "isoFileSystem": "YYYYMMDD"
+    },
+    "dateTime": {
+      "short": "D MMM YYYY HH:mm",
+      "long": "dddd D MMMM YYYY HH:mm",
+      "longTimeZone": "dddd D MMMM YYYY HH:mm z",
+      "isoDate": "YYYY-MM-DDTHH:mm:ss.sssZZ",
+      "isoFileSystem": "YYYYMMDDThhmmssz"
+    }
+  }
+}

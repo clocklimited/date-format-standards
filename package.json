@@ -1,0 +1,26 @@
+{
+  "name": "data-format-standards",
+  "private": true,
+  "description": "List of standard date formats that are to be used at clock.",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs ."
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Paul Serby <paul.serby@clock.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "moment-timezone": "^0.3.1"
+  },
+  "devDependencies": {
+    "jscs": "^1.6.1",
+    "jshint": "^2.5.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:clocklimited/data-format-standards.git"
+  }
+}
