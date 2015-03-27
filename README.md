@@ -3,9 +3,11 @@
 These are the agreed date formats that should be used on Clock projects and
 documentation.
 
-Formats can be changed on client request but these should remain the defaults.
+Formats can be changed on client request, but these should remain the defaults.
 
-Are you free to choose the most appropriate format for your use case.
+You're free to choose the most appropriate format for your use case, but use
+common sense when choosing formats. When space is a premium, use __short__. If
+the audience is international, use __longTimeZone__.
 
 Most importantly, NEVER USE DD/MM/YYYY or MM/DD/YYYY it is real bad format and
 can be confusing internationally.
