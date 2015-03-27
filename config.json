@@ -12,7 +12,7 @@
       "long": "dddd D MMMM YYYY HH:mm",
       "longTimeZone": "dddd D MMMM YYYY HH:mm z",
       "isoDate": "YYYY-MM-DDTHH:mm:ss.sssZZ",
-      "isoFileSystem": "YYYYMMDDThhmmssz"
+      "isoFileSystem": "YYYYMMDDThhmmssZZ"
     }
   }
 }

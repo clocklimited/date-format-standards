@@ -59,9 +59,9 @@ Format: __dddd D MMMM YYYY HH:mm z__
 
 Format: __YYYY-MM-DDTHH:mm:ss.sssZZ__
 
-### isoFileSystem => 19551105T115100GMT
+### isoFileSystem => 19551105T115100+0000
 
-Format: __YYYYMMDDThhmmssz__
+Format: __YYYYMMDDThhmmssZZ__
 
 ## Time Zones Examples
 
@@ -75,9 +75,9 @@ Format: __dddd D MMMM YYYY HH:mm z__
 
 Format: __YYYY-MM-DDTHH:mm:ss.sssZZ__
 
-### isoFileSystem => 19551105T115100GMT
+### isoFileSystem => 19551105T115100+0000
 
-Format: __YYYYMMDDThhmmssz__
+Format: __YYYYMMDDThhmmssZZ__
 
 ### BST
 
@@ -89,9 +89,9 @@ Format: __dddd D MMMM YYYY HH:mm z__
 
 Format: __YYYY-MM-DDTHH:mm:ss.sssZZ__
 
-### isoFileSystem => 19550501T094700BST
+### isoFileSystem => 19550501T094700+0100
 
-Format: __YYYYMMDDThhmmssz__
+Format: __YYYYMMDDThhmmssZZ__
 
 ## UTC Examples
 
@@ -103,9 +103,9 @@ Format: __dddd D MMMM YYYY HH:mm z__
 
 Format: __YYYY-MM-DDTHH:mm:ss.sssZZ__
 
-### isoFileSystem => 19551105T115100UTC
+### isoFileSystem => 19551105T115100+0000
 
-Format: __YYYYMMDDThhmmssz__
+Format: __YYYYMMDDThhmmssZZ__
 
 ### longTimeZone => Sunday 1 May 1955 20:47 UTC
 
@@ -115,6 +115,6 @@ Format: __dddd D MMMM YYYY HH:mm z__
 
 Format: __YYYY-MM-DDTHH:mm:ss.sssZZ__
 
-### isoFileSystem => 19550501T084700UTC
+### isoFileSystem => 19550501T084700+0000
 
-Format: __YYYYMMDDThhmmssz__
+Format: __YYYYMMDDThhmmssZZ__
