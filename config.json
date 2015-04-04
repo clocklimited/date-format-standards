@@ -1,18 +1,26 @@
 {
+  "locale": {
+    "longDateFormat": {
+      "LT": "HH:mm",
+      "LTS": "HH:mm:ss",
+      "L": "D MMM YYYY",
+      "LL": "D MMMM YYYY",
+      "LLL": "D MMMM YYYY LT",
+      "LLLL": "dddd D MMMM YYYY LT"
+    },
+    "calendar": {
+      "lastDay": "[Yesterday at] LT",
+      "sameDay": "[Today at] LT",
+      "nextDay": "[Tomorrow at] LT",
+      "lastWeek": "[Last] dddd [at] LT",
+      "nextWeek": "dddd [at] LT",
+      "sameElse": "LLLL"
+    }
+  },
   "timezone": "Europe/London",
   "formats": {
-    "date": {
-      "short": "D MMM YYYY",
-      "long": "dddd D MMMM YYYY",
-      "isoDate": "YYYY-MM-DD",
-      "isoFileSystem": "YYYYMMDD"
-    },
-    "dateTime": {
-      "short": "D MMM YYYY HH:mm",
-      "long": "dddd D MMMM YYYY HH:mm",
-      "longTimeZone": "dddd D MMMM YYYY HH:mm z",
-      "isoDate": "YYYY-MM-DDTHH:mm:ss.sssZZ",
-      "isoFileSystem": "YYYYMMDDThhmmssZZ"
-    }
+    "timezone": "LLLL z",
+    "isoZ": "YYYY-MM-DDTHH:mm:ss.sss[Z]",
+    "isoZFileSystem": "YYYYMMDDThhmmss[Z]"
   }
 }

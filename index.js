@@ -1,35 +1,41 @@
 var config = require('./config.json')
   , moment = require('moment-timezone')
-  , gmtDate = new Date('1955-11-05 23:51')
-  , bstDate = new Date('1955-05-01 21:47')
-  , dates = { 'GMT': gmtDate, 'BST': bstDate }
+  , gmtDate = '1955-11-05 23:51'
+  , log = console.log
 
-function formatDate (date, formats, format) {
-  console.log('__' + format + '__', '_[' + formats[format] + ']_'
-    , '__' + moment(date).tz(config.timezone).format(formats[format]) + '__\n')
+moment.defineLocale('clock', config.locale)
+
+function formatDate (date, format) {
+  log('* __' + format + '__', moment(date).tz(config.timezone).format(format))
 }
 
-console.log('## Date Formats\n')
+log('## Locale Date Formats\n')
 
-Object.keys(config.formats.date).forEach(formatDate.bind(null, gmtDate, config.formats.date))
+Object.keys(config.locale.longDateFormat).forEach(formatDate.bind(null, gmtDate))
 
-console.log('\n## Date Time Formats\n')
-Object.keys(config.formats.dateTime).forEach(formatDate.bind(null, gmtDate, config.formats.dateTime))
+log('\n## Custom Formats\n')
+log('In addition to some of the standard locale format the following formats have been defined for common tasks.\n')
 
-console.log('\n## Time Zones Examples\n')
-
-Object.keys(dates).forEach(function(key) {
-  console.log('\n### ' + key + '\n')
-
-  formatDate(dates[key], config.formats.dateTime, 'longTimeZone')
-  formatDate(dates[key], config.formats.dateTime, 'isoDate')
-  formatDate(dates[key], config.formats.dateTime, 'isoFileSystem')
+Object.keys(config.formats).forEach(function(format) {
+  log('*', format, '__' + config.formats[format] + '__'
+    , moment(gmtDate).tz(config.timezone).format(config.formats[format]))
 })
 
-console.log('\n## UTC Examples\n')
-config.timezone = 'UTC'
-Object.keys(dates).forEach(function(key) {
-  formatDate(dates[key], config.formats.dateTime, 'longTimeZone')
-  formatDate(dates[key], config.formats.dateTime, 'isoDate')
-  formatDate(dates[key], config.formats.dateTime, 'isoFileSystem')
-})
+log('\n## Calendar Format\n')
+log('This should be used on digital media that refreshes regularly. This is not ' +
+  'suitable for printed media or downloaded content.\n')
+log('Assuming the time is', moment().tz(config.timezone).format('LLLL'), '\n')
+log('*', moment().tz(config.timezone).calendar())
+log('*', moment().subtract(1, 'day').tz(config.timezone).calendar())
+log('*', moment().subtract(2, 'day').tz(config.timezone).calendar())
+log('*', moment().subtract(1, 'week').tz(config.timezone).calendar())
+
+log('\n## Relative Format\n')
+log('This should be used when you want to show a loose human style date when the exact time is not important.\n')
+log('Assuming the time is', moment().tz(config.timezone).format('LLLL'), '\n')
+log('*', moment().tz(config.timezone).fromNow())
+log('*', moment().subtract(1, 'day').tz(config.timezone).fromNow())
+log('*', moment().subtract(2, 'day').tz(config.timezone).fromNow())
+log('*', moment().subtract(1, 'week').tz(config.timezone).fromNow())
+log('*', moment().subtract(1, 'month').tz(config.timezone).fromNow())
+log('*', moment().subtract(1, 'year').tz(config.timezone).fromNow())

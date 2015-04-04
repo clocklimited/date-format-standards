@@ -25,61 +25,43 @@ looked when defining our formats:
 * http://www.wsj.com/articles/default-threat-haunts-ukrainian-corporate-debt-investors-1427392120
 * http://www.theguardian.com/guardian-observer-style-guide-d
 
-## Date Formats
+## Locale Date Formats
 
-__short__ _[D MMM YYYY]_ __5 Nov 1955__
+* __LT__ 23:51
+* __LTS__ 23:51:00
+* __L__ 5 Nov 1955
+* __LL__ 5 November 1955
+* __LLL__ 5 November 1955 23:51
+* __LLLL__ Saturday 5 November 1955 23:51
 
-__long__ _[dddd D MMMM YYYY]_ __Saturday 5 November 1955__
+## Custom Formats
 
-__isoDate__ _[YYYY-MM-DD]_ __1955-11-05__
+In addition to some of the standard locale format the following formats have been defined for common tasks.
 
-__isoFileSystem__ _[YYYYMMDD]_ __19551105__
+* timezone __LLLL z__ Saturday 5 November 1955 23:51 GMT
+* isoZ __YYYY-MM-DDTHH:mm:ss.sss[Z]__ 1955-11-05T23:51:00.000Z
+* isoZFileSystem __YYYYMMDDThhmmss[Z]__ 19551105T115100Z
 
+## Calendar Format
 
-## Date Time Formats
+This should be used on digital media that refreshes regularly. This is not suitable for printed media or downloaded content.
 
-__short__ _[D MMM YYYY HH:mm]_ __5 Nov 1955 23:51__
+Assuming the time is Saturday 4 April 2015 14:55
 
-__long__ _[dddd D MMMM YYYY HH:mm]_ __Saturday 5 November 1955 23:51__
+* Today at 14:55
+* Yesterday at 14:55
+* Last Thursday at 14:55
+* Saturday 28 March 2015 14:55
 
-__longTimeZone__ _[dddd D MMMM YYYY HH:mm z]_ __Saturday 5 November 1955 23:51 GMT__
+## Relative Format
 
-__isoDate__ _[YYYY-MM-DDTHH:mm:ss.sssZZ]_ __1955-11-05T23:51:00.000+0000__
+This should be used when you want to show a loose human style date when the exact time is not important.
 
-__isoFileSystem__ _[YYYYMMDDThhmmssZZ]_ __19551105T115100+0000__
+Assuming the time is Saturday 4 April 2015 14:55
 
-
-## Time Zones Examples
-
-
-### GMT
-
-__longTimeZone__ _[dddd D MMMM YYYY HH:mm z]_ __Saturday 5 November 1955 23:51 GMT__
-
-__isoDate__ _[YYYY-MM-DDTHH:mm:ss.sssZZ]_ __1955-11-05T23:51:00.000+0000__
-
-__isoFileSystem__ _[YYYYMMDDThhmmssZZ]_ __19551105T115100+0000__
-
-
-### BST
-
-__longTimeZone__ _[dddd D MMMM YYYY HH:mm z]_ __Sunday 1 May 1955 21:47 BST__
-
-__isoDate__ _[YYYY-MM-DDTHH:mm:ss.sssZZ]_ __1955-05-01T21:47:00.000+0100__
-
-__isoFileSystem__ _[YYYYMMDDThhmmssZZ]_ __19550501T094700+0100__
-
-
-## UTC Examples
-
-__longTimeZone__ _[dddd D MMMM YYYY HH:mm z]_ __Saturday 5 November 1955 23:51 UTC__
-
-__isoDate__ _[YYYY-MM-DDTHH:mm:ss.sssZZ]_ __1955-11-05T23:51:00.000+0000__
-
-__isoFileSystem__ _[YYYYMMDDThhmmssZZ]_ __19551105T115100+0000__
-
-__longTimeZone__ _[dddd D MMMM YYYY HH:mm z]_ __Sunday 1 May 1955 20:47 UTC__
-
-__isoDate__ _[YYYY-MM-DDTHH:mm:ss.sssZZ]_ __1955-05-01T20:47:00.000+0000__
-
-__isoFileSystem__ _[YYYYMMDDThhmmssZZ]_ __19550501T084700+0000__
+* a few seconds ago
+* a day ago
+* 2 days ago
+* 7 days ago
+* a month ago
+* a year ago
